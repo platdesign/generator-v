@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Christian Blaschke",
+      "authorEmail": "mail@platdesign.de",
+      "authorUrl": ""
+    }
+  }
+}
