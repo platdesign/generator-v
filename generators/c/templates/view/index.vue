@@ -10,6 +10,6 @@
 	@summary 		[Short description]
 -->
 
-<template src="./template" lang="pug"></template>
-<script src="./component"></script>
-<style src="./style" lang="scss" scoped></style>
+<template src="./template.pug" lang="pug"></template>
+<script src="./component.js"></script>
+<style src="./style.scss" lang="scss" scoped></style>
