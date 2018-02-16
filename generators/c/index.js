@@ -46,7 +46,7 @@ module.exports = class extends Generator {
 				type: 'list',
 				name: 'type',
 				message: 'Component type:',
-				choices: ['component', 'view'],
+				choices: ['component', 'view', 'route'],
 				store: false
 			},
 			{
@@ -148,7 +148,21 @@ module.exports = class extends Generator {
 				);
 
 				// create folder for subviews
-				mkdirp.sync(this.destinationPath(`${this.props.name}/views`));
+				//mkdirp.sync(this.destinationPath(`${this.props.name}/views`));
+
+			break;
+
+
+			case 'route':
+
+				// index.js
+				this.fs.copyTpl(
+					this.templatePath('route/index.js'),
+					this.destinationPath(`${this.props.name}/index.js`),
+					tmplScope
+				);
+
+				//mkdirp.sync(this.destinationPath(`${this.props.name}/routes`));
 
 			break;
 		}
