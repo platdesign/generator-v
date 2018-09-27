@@ -47,6 +47,9 @@
       "node": true
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "platdesign/generator-v",
   "license": "MIT"
 }
