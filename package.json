@@ -1,5 +1,5 @@
 {
-  "name": "@platdesign/generator-v",
+  "name": "generator-v",
   "version": "0.0.0",
   "description": "vue generators",
   "homepage": "",
@@ -20,17 +20,17 @@
     "eslint-config-xo-space": "^0.16.0",
     "jest": "^19.0.2",
     "jest-cli": "^20.0.0",
-    "np": "^3.0.4",
+    "np": "^3.1.0",
     "nsp": "^2.8.1",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^1.9.1"
   },
   "dependencies": {
     "chalk": "^1.1.3",
-    "find-package-json": "^1.1.0",
-    "mkdirp": "^0.5.1",
-    "moment": "^2.22.2",
-    "yeoman-generator": "^1.0.0",
+    "find-package-json": "^1.2.0",
+    "mkdirp": "^0.5.5",
+    "moment": "^2.29.1",
+    "yeoman-generator": "^5.4.2",
     "yosay": "^2.0.2"
   },
   "jest": {

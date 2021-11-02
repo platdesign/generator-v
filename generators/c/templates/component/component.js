@@ -11,28 +11,6 @@
 
 export default {
 
-	name: '<%- name %>',
 
-	created() {
-
-	},
-
-	data() {
-		return {
-
-		}
-	},
-
-	watch: {
-
-	},
-
-	methods: {
-
-	},
-
-	computed: {
-
-	}
 
 }
