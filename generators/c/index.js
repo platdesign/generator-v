@@ -40,25 +40,25 @@ module.exports = class extends Generator {
 
 
 		this.props = await this.prompt([{
-				type: 'list',
-				name: 'type',
-				message: 'Component type:',
-				choices: ['component', 'route'],
-				store: false
-			},
-			{
-				type: 'input',
-				name: 'name',
-				message: 'Component name:',
-				validate: input => Boolean(input)
-			},
-			{
-				type: 'input',
-				name: 'author',
-				message: 'Author:',
-				default: defaultAuthor(),
-				validate: input => Boolean(input)
-			}
+			type: 'list',
+			name: 'type',
+			message: 'Component type:',
+			choices: ['component', 'route', 'route (v3)'],
+			store: false
+		},
+		{
+			type: 'input',
+			name: 'name',
+			message: 'Component name:',
+			validate: input => Boolean(input)
+		},
+		{
+			type: 'input',
+			name: 'author',
+			message: 'Author:',
+			default: defaultAuthor(),
+			validate: input => Boolean(input)
+		}
 		]);
 	}
 
@@ -117,6 +117,19 @@ module.exports = class extends Generator {
 				// Index.js
 				this.fs.copyTpl(
 					this.templatePath('route/index.js'),
+					this.destinationPath(`${this.props.name}/index.js`),
+					tmplScope
+				);
+
+				// Mkdirp.sync(this.destinationPath(`${this.props.name}/routes`));
+
+				break;
+
+			case 'route (v3)':
+
+				// Index.js
+				this.fs.copyTpl(
+					this.templatePath('route-v3/index.js'),
 					this.destinationPath(`${this.props.name}/index.js`),
 					tmplScope
 				);
